@@ -52,7 +52,7 @@ const Formulario = () => {
             guardarCryptos(resultado.data.Data);
         }
         consultarAPI();
-    })
+    }, [])
 
     return (  
         <form>
