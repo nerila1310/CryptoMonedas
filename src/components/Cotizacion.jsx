@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const ResultadoDiv = styled.div`
     color: #FFF;
@@ -25,7 +26,6 @@ const Precio = styled.p`
 const Cotizacion = ({resultado}) => {
     
     if(Object.keys(resultado).length === 0) return null;
-    console.log(resultado);
     
     return (  
         <ResultadoDiv>
@@ -37,5 +37,10 @@ const Cotizacion = ({resultado}) => {
         </ResultadoDiv>
     );
 }
+
+Cotizacion.propTypes = {
+    resultado: PropTypes.object.isRequired
+}
+
  
 export default Cotizacion;
